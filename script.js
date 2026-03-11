@@ -60,7 +60,7 @@ localStorage.setItem("user",JSON.stringify(user))
 
 alert("Registration Successful")
 
-window.location="login.html"
+window.location="index.html"
 
 }
 
@@ -222,7 +222,6 @@ if(complaints.length===0){
 
 container.innerHTML="<p>No complaints found</p>"
 return
-filterComplaints()
 }
 
 complaints.forEach((c,index)=>{
