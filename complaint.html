@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Submit Complaint</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body onload="loadProfile()">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+🛡 CitizenVoice
+</div>
+
+<div class="nav-links">
+
+<a href="citizen-home.html">Home</a>
+<a href="complaint.html">Submit Complaint</a>
+<a href="complaints.html">My Complaints</a>
+
+</div>
+
+<div class="profile-container">
+
+<div class="profile-btn" onclick="toggleProfile()">
+
+<div class="avatar" id="avatarLetter">U</div>
+
+<span id="profileName">User</span>
+
+<span class="arrow">▼</span>
+
+</div>
+
+<div class="profile-dropdown" id="profileDropdown">
+
+<div class="profile-info">
+
+<div class="avatar large" id="avatarLarge">U</div>
+
+<div>
+
+<h4 id="profileNameCard">User</h4>
+
+<p id="profileEmail">user@email.com</p>
+
+<span class="role">USER</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<button class="logout-btn" onclick="logoutUser()">Sign Out</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="form-card">
+
+<h2>Submit a Complaint</h2>
+
+<form onsubmit="submitComplaint(event)">
+
+<div class="category-grid">
+
+<button type="button" class="category-btn" onclick="selectCategory(this)">
+Road & Infrastructure
+</button>
+
+<button type="button" class="category-btn" onclick="selectCategory(this)">
+Water Supply
+</button>
+
+<button type="button" class="category-btn" onclick="selectCategory(this)">
+Electricity
+</button>
+
+<button type="button" class="category-btn" onclick="selectCategory(this)">
+Waste Management
+</button>
+
+<button type="button" class="category-btn" onclick="selectCategory(this)">
+Public Safety
+</button>
+
+<button type="button" class="category-btn" onclick="selectCategory(this)">
+Other Civic Issues
+</button>
+
+</div>
+
+<label>Complaint Title</label>
+
+<input id="title" placeholder="e.g., Pothole on Main Street" required>
+
+<label>Description</label>
+
+<textarea id="description" required></textarea>
+
+<label>Location</label>
+
+<div class="location-row">
+
+<input id="location" placeholder="Enter location" required>
+
+<button type="button" onclick="getLocation()">📍 GPS</button>
+
+</div>
+
+<label>Upload Evidence</label>
+
+<div class="upload-box">
+
+<input type="file" id="evidence" accept="image/*,video/*" onchange="previewImage(event)">
+
+<p>Click to upload images or videos</p>
+
+<img id="preview" style="display:none; width:150px; margin-top:10px; border-radius:6px;">
+
+</div>
+
+<div class="form-buttons">
+
+<button type="button" onclick="window.location='citizen-home.html'">
+Cancel
+</button>
+
+<button class="signin-btn" type="submit">
+Submit Complaint
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

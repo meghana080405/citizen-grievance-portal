@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
+</head>
+
+<body onload="loadAdminDashboardStats(); loadAdminDashboard();">
+
+<div class="container">
+
+<h2>Admin / Officer Dashboard</h2>
+
+<p>Manage all citizen complaints</p>
+
+
+<!-- DASHBOARD STATS -->
+
+<div class="stats">
+
+<div class="stat-card">
+<h3 id="adminTotal">0</h3>
+<p>Total Complaints</p>
+</div>
+
+<div class="stat-card green">
+<h3 id="adminResolved">0</h3>
+<p>Resolved</p>
+</div>
+
+<div class="stat-card orange">
+<h3 id="adminProgress">0</h3>
+<p>In Progress</p>
+</div>
+
+<div class="stat-card purple">
+<h3 id="adminPending">0</h3>
+<p>Pending</p>
+</div>
+
+</div>
+
+
+<h3>All Complaints</h3>
+
+<div id="adminComplaintsContainer"></div>
+
+</div>
+
+</body>
+</html>

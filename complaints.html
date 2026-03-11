@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Complaints</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body onload="loadProfile(); loadComplaints();">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+🛡 CitizenVoice
+</div>
+
+<div class="nav-links">
+<a href="citizen-home.html">Home</a>
+<a href="complaint.html">Submit Complaint</a>
+<a href="complaints.html">My Complaints</a>
+</div>
+
+<div class="profile-container">
+
+<div class="profile-btn" onclick="toggleProfile()">
+
+<div class="avatar" id="avatarLetter">U</div>
+<span id="profileName">User</span>
+<span class="arrow">▼</span>
+
+</div>
+
+<div class="profile-dropdown" id="profileDropdown">
+
+<div class="profile-info">
+
+<div class="avatar large" id="avatarLarge">U</div>
+
+<div>
+<h4 id="profileNameCard">User</h4>
+<p id="profileEmail">user@email.com</p>
+<span class="role">USER</span>
+</div>
+
+</div>
+
+<hr>
+
+<button class="logout-btn" onclick="logoutUser()">Sign Out</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE CONTENT -->
+
+<div class="container">
+
+<h2>My Complaints</h2>
+
+<p class="subtitle">Track all your submitted grievances.</p>
+
+
+<!-- SEARCH + FILTER -->
+
+<div class="search-bar">
+
+<input 
+id="searchInput"
+placeholder="Search by title or complaint ID"
+onkeyup="filterComplaints()"
+>
+
+<select id="statusFilter" onchange="filterComplaints()">
+
+<option value="All">All</option>
+<option value="Pending">Pending</option>
+<option value="In Progress">In Progress</option>
+<option value="Resolved">Resolved</option>
+
+</select>
+
+</div>
+
+
+<!-- COMPLAINT LIST -->
+
+<div id="complaintsContainer"></div>
+
+</div>
+
+</body>
+</html>
